@@ -1,4 +1,4 @@
-[🇬🇧 English Version](README_EN.md)
+[🇬🇧 English Version](https://github.com/NeuroLoft/NEURO-ESTATE/blob/main/Pack_for_GitHub_and_Media/README.md))
 
 # 🌲 NEURO-ESTATE: Операционная Система Жизни
 ### *Родовое Поместье 2.0: Где Традиции Встречают Сингулярность*
