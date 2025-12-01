@@ -60,7 +60,7 @@ git clone https://github.com/NeuroLoft/NEURO-ESTATE.git
 python Neuro_Estate_OS.py
 ```
 
-### Вариант 2: Интерактивный Ноутбук
+**Вариант 2: Интерактивный Ноутбук**
 Хотите визуальный интерфейс? Откройте `Neuro_Estate_Simulation.ipynb` в Jupyter или VS Code.
 
 [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://github.com/NeuroLoft/NEURO-ESTATE/blob/main/Neuro_Estate_Simulation.ipynb)
