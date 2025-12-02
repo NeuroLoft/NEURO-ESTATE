@@ -70,8 +70,8 @@ full_text = re.sub(r'(?m)^(\s*)\*\s', r'\1• ', full_text)
 # 2. Bold: Replace '**' with '__'
 full_text = full_text.replace('**', '__')
 
-# 3. Italic/Other: Replace remaining '*' with '_'
-full_text = full_text.replace('*', '_')
+# 3. Italic/Other: Remove remaining '*' (User requested to remove italic markers)
+full_text = full_text.replace('*', '')
 
 # Write to output file
 with open(output_path, "w", encoding="utf-8") as f:
