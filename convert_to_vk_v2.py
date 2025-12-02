@@ -2,8 +2,8 @@ import json
 import re
 import os
 
-input_path = r"c:\Users\admin\Desktop\Проект РП\Итоги.ipynb"
-output_path = r"c:\Users\admin\Desktop\Проект РП\Итоги_VK.md"
+input_path = r"c:\Users\admin\Desktop\Проект РП\Release\Pack_for_GitHub_and_Media\Итоги.ipynb"
+output_path = r"c:\Users\admin\Desktop\Проект РП\Release\Pack_for_GitHub_and_Media\Итоги_VK.md"
 
 print(f"Reading from: {input_path}")
 
