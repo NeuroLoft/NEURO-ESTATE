@@ -239,7 +239,8 @@ def main():
     cprint(f"{'ГОД':<5} | {'ВЫРУЧКА (REV)':<15} | {'ЧИСТАЯ ПРИБЫЛЬ':<16} | {'АКТИВЫ (ASSETS)':<18} | {'СОБЫТИЕ (EVENT)'}", TerminalColors.BLUE)
     print("-" * 95)
     
-    for y in range(years):
+    for y in range(years):Kokorin
+    
         time.sleep(0.1) 
         report = kernel.run_year()
         
