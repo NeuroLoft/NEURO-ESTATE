@@ -67,8 +67,8 @@ except json.JSONDecodeError:
 # 1. List bullets: Replace '* ' at start of line with '• '
 full_text = re.sub(r'(?m)^(\s*)\*\s', r'\1• ', full_text)
 
-# 2. Bold: Replace '**' with '__'
-full_text = full_text.replace('**', '__')
+# 2. Bold: Remove '**' (User requested to remove bold markers)
+full_text = full_text.replace('**', '')
 
 # 3. Italic/Other: Remove remaining '*' (User requested to remove italic markers)
 full_text = full_text.replace('*', '')
