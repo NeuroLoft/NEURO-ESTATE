@@ -1,4 +1,9 @@
-﻿# Раздел 0. Терминологическая Матрица и Глоссарий (Цифровая Суверенная Экосистема)
+﻿import os
+import codecs
+
+BASE_DIR = r"C:\Users\admin\Desktop\NeuroLoft\NEURO-ESTATE\ТЭО_Родовое_Поместье_Кейс"
+
+matrix_content = '''# Раздел 0. Терминологическая Матрица и Глоссарий (Цифровая Суверенная Экосистема)
 
 Данный документ представляет собой единый стандарт локализации и международной адаптации проекта **«Цифровая Суверенная Экосистема: Нейро-Усадьба» (Digital Sovereign Ecosystem: Neuro-Estate)**.
 Цель: Сохранить высочайший инвестиционный и научный престиж на международной арене, опираясь на концепцию суверенных российских технологий.
@@ -21,3 +26,54 @@
 
 ## 3. Навигация по Базе Знаний
 Документ скомпилирован в единую прозрачную структуру. Все разделы связаны перекрестными ссылками и интегрированы с платформой **Gravita+** для многоуровневого поиска.
+'''
+
+with codecs.open(os.path.join(BASE_DIR, 'ТЭО_Родовое_Поместье_Раздел_0_Терминологическая_Матрица.md'), 'w', 'utf-8-sig') as f:
+    f.write(matrix_content)
+
+
+def process_markdown_files():
+    md_files = [f for f in os.listdir(BASE_DIR) if f.endswith('.md')]
+    for file_name in md_files:
+        file_path = os.path.join(BASE_DIR, file_name)
+        with codecs.open(file_path, 'r', 'utf-8-sig') as f:
+            content = f.read()
+
+        content = content.replace("ТЭО Родовое поместье 3.0 deeptech хаб", "«Цифровая Суверенная Экосистема: Нейро-Усадьба»")
+        content = content.replace("Родовое поместье 3.0 deeptech хаб", "Цифровая Суверенная Экосистема: Нейро-Усадьба")
+        content = content.replace("Родовое Поместье 3.0", "Нейро-Усадьба (Neuro-Estate)")
+        content = content.replace("«DeepTech-Хаб: Родовое Поместье»", "«Цифровая Суверенная Экосистема: Нейро-Усадьба»")
+        
+        if "Раздел_2_Резюме_проекта" in file_name:
+            if "реабилитации силовиков" not in content:
+                content = content.replace(
+                    "реабилитации, включая социализацию и трудоустройство ветеранов СВО",
+                    "физической и психологической реабилитации силовиков, ветеранов СВО и интеграции в высокотехнологичную экономику"
+                )
+        if "Стратегия_Суверенного_DeepTech" in file_name:
+             content = content.replace(
+                 "Мы строим \"Кремниевую Долину\" на 100% отечественном стеке.",
+                 "Мы реализуем концепцию «Русского технологического суверенитета» — создание автономной, экспортно-ориентированной платформы."
+             )
+
+        with codecs.open(file_path, 'w', 'utf-8-sig') as f:
+            f.write(content)
+
+process_markdown_files()
+
+def build_master_file():
+    md_files = [f for f in os.listdir(BASE_DIR) if f.endswith('.md')]
+    content = ""
+    for file_name in md_files:
+        try:
+            with codecs.open(os.path.join(BASE_DIR, file_name), 'r', 'utf-8-sig') as f:
+                content += "\n\n--- " + file_name + " ---\n\n" + f.read()
+        except:
+            pass
+
+    out_file = os.path.join(BASE_DIR, 'ТЭО_Цифровая_Суверенная_Экосистема_НейроУсадьба.txt')
+    with codecs.open(out_file, 'w', 'utf-8-sig') as f:
+        f.write(content)
+    print("AI Master Text Document successfully built.")
+
+build_master_file()
