@@ -1,4 +1,4 @@
-﻿# 🌍 Родовое Поместье 3.0: Distributed Safe-Haven Cluster
+﻿# 🌍 Родовое Поместье 3.0: Distributed DeepTech-хаб (Safe-Haven Cluster)
 
 ![Version](https://img.shields.io/badge/Version-1.0_RC_DeepTech-blue)
 ![Status](https://img.shields.io/badge/Status-Investment_Pitchbook-green)
