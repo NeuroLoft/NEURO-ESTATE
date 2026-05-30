@@ -215,6 +215,7 @@ def main():
     print("   Загрузка Ядра (Initializing Kernel)... [OK]")
     print("   Загрузка Экономических Моделей (Loading Models)... [OK]")
     print("   Подключение к Глобальному DAO (Connecting to DAO)... [OK]")
+    cprint("   🤖 ИИ-движок: DeepSeek (AI Engine: DeepSeek)   ", TerminalColors.CYAN)
     print("\n")
 
     # User Input
@@ -239,8 +240,7 @@ def main():
     cprint(f"{'ГОД':<5} | {'ВЫРУЧКА (REV)':<15} | {'ЧИСТАЯ ПРИБЫЛЬ':<16} | {'АКТИВЫ (ASSETS)':<18} | {'СОБЫТИЕ (EVENT)'}", TerminalColors.BLUE)
     print("-" * 95)
     
-    for y in range(years):Kokorin
-    
+    for y in range(years):
         time.sleep(0.1) 
         report = kernel.run_year()
         
