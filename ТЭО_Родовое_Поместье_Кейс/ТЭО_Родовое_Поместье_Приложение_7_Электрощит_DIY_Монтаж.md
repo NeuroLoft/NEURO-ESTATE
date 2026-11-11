@@ -506,4 +506,4 @@ Zigbee PIR-датчик (уличный IP65):
 ---
 
 (c) Dolgozhdan — Creator & Developer
-Produced by human ingenuity, powered by AI synergy: Claude Sonnet 5 & YandexGPT 5.1 collaboration 🌌🤖
+*Собрано человеческим замыслом вместе со многими SI. Ни один вендор не указан автором.*
